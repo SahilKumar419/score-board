@@ -42,6 +42,7 @@ function NumberIncrementRenderer({ start = 0, end, timer }: NumberIncrementRende
     return (
         <div>
             <span>{currentNumber}</span>
+            <span style={{color: "#cfcfcf", marginLeft: "10px", fontSize: "12px"}}>Points</span>
         </div>
     )
 }

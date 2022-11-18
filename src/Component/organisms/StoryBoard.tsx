@@ -1,16 +1,17 @@
 import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import CardComponent from "../molecules/Card";
 import styled from "styled-components";
-import randomScoreGenerator from "../../shared/randomScoreGenerator";
+import scoreGenerator from "../../shared/scoreGenerator";
 
 const StoryBoard = styled.div`
     border-radius:10px;
     background-color:white;
     margin:20px;
+    overflow: hidden;
 `
 
 function StoryBoardComponent() {
-    const [userData, setUserData] = useState<Array<any>>(randomScoreGenerator());
+    const [userData, setUserData] = useState<Array<any>>(scoreGenerator());
 
     const treeRoot = React.createRef<any>();
 
@@ -74,7 +75,7 @@ function StoryBoardComponent() {
 
     useEffect(() => {
         const setIntevalId = setInterval(() => {
-            setUserData(randomScoreGenerator());
+            setUserData(scoreGenerator());
         }, 1000);
         return (() => { clearTimeout(setIntevalId); })
     }, []);

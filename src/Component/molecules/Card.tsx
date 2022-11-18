@@ -18,7 +18,9 @@ const CardStyled = styled.div <CardStyledInterface>`
     background-color:${(props) => (props.type == "odd") ? "#F9FAFE" : "#ffff"};
     border-bottom:1px  grey;
     &:hover{
-        background-color:#4A69DD;
+        background-color:#f76b1c;
+        color: #ffffff;
+       cursor: pointer;
     };
 `
 const ProfileContainer = styled.div`

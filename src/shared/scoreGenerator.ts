@@ -1,11 +1,11 @@
-interface IrandomScoreGenerator {
+interface IscoreGenerator {
     userID: string;
     displayName: string;
     picture: string;
     score: number;
 }
 
-function randomScoreGenerator() {
+function scoreGenerator() {
     const flickingData = [
         {
             "userID": "u-1",
@@ -82,4 +82,4 @@ function randomScoreGenerator() {
     });
 }
 
-export default randomScoreGenerator;
+export default scoreGenerator;
