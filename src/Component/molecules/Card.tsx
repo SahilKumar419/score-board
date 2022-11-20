@@ -1,9 +1,9 @@
 import React from "react";
 import TextComponent from "../atoms/Text";
 import styled from "styled-components";
-import RoundIconAvatar from "../atoms/RoundIconAvatar";
-import RankedIcon from "../atoms/RankIcon";
-import NumberIncrementRenderer from "../atoms/NumberIncremental";
+import RoundIcon from "../atoms/RoundIcon";
+import RankImg from "../atoms/RankImg";
+import NumberIncrementRenderer from "../atoms/NumberIncrease";
 import usePrevious from "../../CustomHooks/usePreviousEffect";
 
 interface CardStyledInterface {
@@ -36,8 +36,8 @@ function CardComponent(props: CardComponentInterface) {
     return (
         <CardStyled data-key={props.userID} key={props.userID} type={props.type}>
             <ProfileContainer>
-                <RankedIcon rank={props.rank} />
-                <RoundIconAvatar src={props.imageLink} rank={props.rank} />
+                <RankImg rank={props.rank} />
+                <RoundIcon src={props.imageLink} rank={props.rank} />
                 <TextComponent text={props.text} />
             </ProfileContainer>
             <NumberIncrementRenderer start={previousNumber} end={props.score} timer={100} />

@@ -29,7 +29,7 @@ function StoryBoardComponent() {
 
     let flagInitialRun = useRef(true);
 
-    const getCalculatedPositions = (start: any, target: any) => ({
+    const getPositions = (start: any, target: any) => ({
         top: start.top - target.top,
         left: start.left - target.left,
         width: start.width / target.width,
@@ -55,7 +55,7 @@ function StoryBoardComponent() {
             if (!flagInitialRun.current) {
                 if (key in origins.current) {
                     const previous = origins.current[key];
-                    const delta = getCalculatedPositions(previous, next);
+                    const delta = getPositions(previous, next);
                     if (!isZero(delta)) {
                         conditionalInvertStyling(delta, child);
 
